@@ -35,9 +35,21 @@ services:
     environment:
       PMA_HOST: db_stage
       MYSQL_ROOT_PASSWORD: secure_stage_2026
+  
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer_container
+    restart: always
+    ports:
+      - "9443:9443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
 
 # On doit déclarer le volume nommé ici
 volumes:
   data:
+  portainer_data:
+ 
 
  
