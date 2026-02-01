@@ -1,0 +1,10 @@
+# Données de la base de données (Tes Go de données)
+data/
+
+web/
+
+# Données de Portainer
+portainer_data/
+
+# Fichiers de configuration sensibles
+.env
